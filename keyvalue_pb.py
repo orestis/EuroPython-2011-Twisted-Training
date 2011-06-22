@@ -10,7 +10,7 @@ class KeyValuePB(pb.Root):
         return self.store.get(key)
 
     def remote_set(self, key, value):
-        return self.store.get(key, value)
+        return self.store.set(key, value)
 
     def remote_delete(self, key):
         return self.store.delete(key)
